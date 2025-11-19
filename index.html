@@ -30,9 +30,138 @@
     html {
         scroll-behavior: smooth;
     }
-</style>
+
+    /* Improved Portfolio Styles */
+    body {
+        font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif !important;
+        line-height: 1.6;
+        letter-spacing: -0.01em;
+    }
+
+    /* Enhanced Typography */
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    /* Projects Section Hover Effects */
+    .project-card:hover {
+        transform: translateY(-8px) !important;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.15) !important;
+    }
+
+    .project-btn:hover {
+        transform: scale(1.05) !important;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important;
+    }
+
+    .view-more-btn:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 25px rgba(45,55,72,0.4) !important;
+    }
+
+    /* Responsive Design for Projects */
+    @media (max-width: 768px) {
+        .projects-grid {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+        }
+
+        .project-card {
+            margin: 0 10px;
+        }
+
+        #projects {
+            padding: 60px 0 !important;
+        }
+
+        #projects h2 {
+            font-size: 2rem !important;
+        }
+
+        #projects p {
+            font-size: 1rem !important;
+            margin-bottom: 30px !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .projects-grid {
+            grid-template-columns: 1fr !important;
+            gap: 15px !important;
+        }
+
+        .project-card {
+            margin: 0 5px;
+        }
+
+        .project-card div[style*="padding: 25px"] {
+            padding: 20px !important;
+        }
+
+        #projects h2 {
+            font-size: 1.8rem !important;
+        }
+
+        .view-more-btn {
+            padding: 12px 25px !important;
+            font-size: 1rem !important;
+        }
+    }
+
+    /* Better Button Styles */
+    .u-btn-1 {
+        transition: all 0.3s ease !important;
+        border: 2px solid transparent !important;
+    }
+
+    .u-btn-1:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important;
+    }
+
+    /* Improved About Section */
+    .u-group-1 {
+        backdrop-filter: blur(10px);
+        background: rgba(255,255,255,0.9) !important;
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    /* Better Image Styling */
+    .u-image-1 {
+        border-radius: 50% !important;
+        border: 4px solid rgba(255,255,255,0.8) !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+    }
+
+    /* Enhanced Skills Section */
+    .u-section-2 {
+        padding: 80px 0 !important;
+    }
+
+    /* Better Footer */
+    .u-footer {
+        padding: 50px 0 !important;
+        background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%) !important;
+    }
+
+    /* Mobile Navigation Improvements */
+    @media (max-width: 991px) {
+        .u-nav-2 li {
+            margin: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+        }
+
+        .u-nav-2 a {
+            font-size: 1.1rem !important;
+            padding: 15px 20px !important;
+        }
+    }
+  </style>
 </head>
-  <body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="false" class="u-body u-image u-xl-mode" data-lang="en" style="background-position: 50% 50%; background-image: url(&quot;images/default-image.jpg&quot;);"><header class="u-clearfix u-header u-white u-header" id="header" data-href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit"><div class="u-clearfix u-sheet u-sheet-1">
+  <body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="false" class="u-body u-image u-xl-mode" data-lang="en" style="background-position: 50% 50%; background-image: url(&quot;images/default-image.jpg&quot;);"><header class="u-clearfix u-header u-white u-header" id="header"><div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
             <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
@@ -43,9 +172,10 @@
           </div>
           <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="./" style="padding: 10px 20px;">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="/the-site/#about" style="padding: 10px 20px;">About Me</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="/the-site/#skills" style="padding: 10px 20px;">Skills</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="/the-site/#footer" style="padding: 10px 20px;">Contact</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#about" style="padding: 10px 20px;">About Me</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#projects" style="padding: 10px 20px;">Projects</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#skills" style="padding: 10px 20px;">Skills</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#footer" style="padding: 10px 20px;">Contact</a>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
@@ -54,11 +184,9 @@
                 <div class="u-menu-close"></div>
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#about">About Me</a>
-  <li class="u-nav-item">
-    <a class="u-button-style u-nav-link" href="#footer">Contact</a>
-  </li>
-  
-
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#projects">Projects</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#skills">Skills</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#footer">Contact</a>
 </li></ul>
               </div>
             </div>
@@ -84,6 +212,62 @@
       </div>
       </div>
       <div id="skills">
+    </section>
+
+    <!-- Projects Section -->
+    <section class="u-clearfix u-section-projects" id="projects" style="padding: 80px 0; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
+      <div class="u-clearfix u-sheet u-sheet-1" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <h2 class="u-text u-text-default u-text-1" style="text-align: center; font-size: 2.5rem; margin-bottom: 20px; color: #2d3748;">My Projects</h2>
+        <p style="text-align: center; font-size: 1.1rem; color: #4a5568; margin-bottom: 50px; max-width: 600px; margin-left: auto; margin-right: auto;">Here are some of my featured projects that showcase my skills in full-stack development, UI/UX design, and modern web technologies.</p>
+
+        <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 50px;">
+          <!-- Project 1 -->
+          <div class="project-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <div class="project-image" style="height: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: relative; overflow: hidden;">
+              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white;">
+                <h3 style="margin: 0; font-size: 1.5rem; font-weight: 600;">NestAway</h3>
+                <p style="margin: 8px 0 0; opacity: 0.9;">Home Sharing Platform</p>
+              </div>
+            </div>
+            <div style="padding: 25px;">
+              <h3 style="margin: 0 0 15px; font-size: 1.3rem; color: #2d3748;">NestAway - Airbnb Clone</h3>
+              <p style="color: #4a5568; line-height: 1.6; margin-bottom: 20px;">A full-stack home sharing marketplace built with React, Express.js, and PostgreSQL. Features user authentication, property listings, booking system, and review functionality.</p>
+              <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <span style="background: #e2e8f0; color: #2d3748; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">React</span>
+                <span style="background: #e2e8f0; color: #2d3748; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">Express.js</span>
+                <span style="background: #e2e8f0; color: #2d3748; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">PostgreSQL</span>
+              </div>
+              <a href="https://home-sharing-marketplace-practice.onrender.com" target="_blank" class="project-btn" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.2s ease;">View Live Project</a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <div class="project-image" style="height: 200px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); position: relative; overflow: hidden;">
+              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white;">
+                <h3 style="margin: 0; font-size: 1.5rem; font-weight: 600;">Local Reviews</h3>
+                <p style="margin: 8px 0 0; opacity: 0.9;">Review Platform</p>
+              </div>
+            </div>
+            <div style="padding: 25px;">
+              <h3 style="margin: 0 0 15px; font-size: 1.3rem; color: #2d3748;">Local Reviews App</h3>
+              <p style="color: #4a5568; line-height: 1.6; margin-bottom: 20px;">A comprehensive local business review platform where users can discover, rate, and review local establishments. Features user authentication, business listings, rating system, and community-driven reviews.</p>
+              <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <span style="background: #e2e8f0; color: #2d3748; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">JavaScript</span>
+                <span style="background: #e2e8f0; color: #2d3748; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">Node.js</span>
+                <span style="background: #e2e8f0; color: #2d3748; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">Express</span>
+                <span style="background: #e2e8f0; color: #2d3748; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">PostgreSQL</span>
+              </div>
+              <a href="https://local-reviews-app.onrender.com" target="_blank" class="project-btn" style="display: inline-block; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.2s ease;">View Live Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- View More Button -->
+        <div style="text-align: center;">
+          <a href="https://github.com/Jordan-Pierson" target="_blank" class="view-more-btn" style="display: inline-block; background: #2d3748; color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(45,55,72,0.3);">View More Projects on GitHub</a>
+        </div>
+      </div>
     </section>
     <section class="u-align-center-lg u-align-center-md u-align-center-xl u-align-left-sm u-align-left-xs u-clearfix u-section-2" data-image-width="2000" data-image-height="1333" id="block-3">
       <div class="u-clearfix u-sheet u-sheet-1">
