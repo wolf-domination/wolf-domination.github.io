@@ -146,8 +146,22 @@
         background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%) !important;
     }
 
+    /* Header Responsive Styles */
+    .resume-btn:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4) !important;
+    }
+
     /* Mobile Navigation Improvements */
     @media (max-width: 991px) {
+        .header-name {
+            font-size: 1.3rem !important;
+        }
+
+        .resume-btn {
+            display: none !important;
+        }
+
         .u-nav-2 li {
             margin: 10px 0;
             border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -158,11 +172,48 @@
             font-size: 1.1rem !important;
             padding: 15px 20px !important;
         }
+
+        /* Show mobile resume button */
+        .u-nav-2 li:last-child {
+            border-bottom: none;
+            margin-top: 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .u-sheet-1 {
+            padding: 10px 15px !important;
+        }
+
+        .header-name {
+            font-size: 1.2rem !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .u-sheet-1 {
+            padding: 8px 12px !important;
+        }
+
+        .header-name {
+            font-size: 1.1rem !important;
+        }
+
+        .menu-collapse {
+            font-size: 0.9rem !important;
+        }
     }
   </style>
 </head>
-  <body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="false" class="u-body u-image u-xl-mode" data-lang="en" style="background-position: 50% 50%; background-image: url(&quot;images/default-image.jpg&quot;);"><header class="u-clearfix u-header u-white u-header" id="header"><div class="u-clearfix u-sheet u-sheet-1">
-        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+  <body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="false" class="u-body u-image u-xl-mode" data-lang="en" style="background-position: 50% 50%; background-image: url(&quot;images/default-image.jpg&quot;);"><header class="u-clearfix u-header u-white u-header" id="header"><div class="u-clearfix u-sheet u-sheet-1" style="display: flex; align-items: center; justify-content: space-between; padding: 15px 20px;">
+        <!-- Left: Name -->
+        <div class="header-name" style="font-size: 1.5rem; font-weight: 700; color: #2d3748; display: flex; align-items: center;">
+          Jordan Pierson
+        </div>
+
+        <!-- Right: Navigation and Resume Button -->
+        <div style="display: flex; align-items: center; gap: 20px;">
+        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1" style="position: static;">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
             <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
               <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
@@ -187,12 +238,17 @@
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#projects">Projects</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#skills">Skills</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#footer">Contact</a>
+</li><li class="u-nav-item" style="margin-top: 20px;"><a class="u-button-style u-nav-link" href="/Jordan-Resume.pdf" target="_blank" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white !important; padding: 12px 24px; border-radius: 25px; font-weight: 600; display: inline-block; margin: 0 20px;">Resume</a>
 </li></ul>
               </div>
             </div>
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
+
+        <!-- Resume Button -->
+        <a href="/Jordan-Resume.pdf" target="_blank" class="resume-btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);">Resume</a>
+        </div>
       </div></header>
     <section class="u-clearfix u-section-1" id="block-1">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
@@ -251,11 +307,11 @@
             </div>
             <div style="padding: 25px;">
               <h3 style="margin: 0 0 15px; font-size: 1.3rem; color: #2d3748;">Local Reviews App</h3>
-              <p style="color: #4a5568; line-height: 1.6; margin-bottom: 20px;">A comprehensive local business review platform where users can discover, rate, and review local establishments. Features user authentication, business listings, rating system, and community-driven reviews.</p>
+              <p style="color: #4a5568; line-height: 1.6; margin-bottom: 20px;">A comprehensive local business review platform built with Flask backend where users can discover, rate, and review local establishments. Features user authentication, business listings, rating system, and community-driven reviews.</p>
               <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <span style="background: #e2e8f0; color: #2d3748; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">JavaScript</span>
-                <span style="background: #e2e8f0; color: #2d3748; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">Node.js</span>
-                <span style="background: #e2e8f0; color: #2d3748; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">Express</span>
+                <span style="background: #e2e8f0; color: #2d3748; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">Python</span>
+                <span style="background: #e2e8f0; color: #2d3748; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">Flask</span>
+                <span style="background: #e2e8f0; color: #2d3748; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">SQLAlchemy</span>
                 <span style="background: #e2e8f0; color: #2d3748; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">PostgreSQL</span>
               </div>
               <a href="https://local-reviews-app.onrender.com" target="_blank" class="project-btn" style="display: inline-block; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.2s ease;">View Live Project</a>
