@@ -146,74 +146,252 @@
         background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%) !important;
     }
 
-    /* Header Responsive Styles */
-    .resume-btn:hover {
-        transform: translateY(-2px) !important;
-        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4) !important;
+    /* Modern Header Styles */
+    .modern-header {
+        background: white;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid #e2e8f0;
     }
 
-    /* Mobile Navigation Improvements */
-    @media (max-width: 991px) {
-        .header-name {
-            font-size: 1.3rem !important;
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+        height: 70px;
+    }
+
+    .header-name {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #2d3748;
+        letter-spacing: -0.5px;
+    }
+
+    .header-name a:hover {
+        color: #4299e1 !important;
+        transition: color 0.3s ease;
+    }
+
+    .desktop-nav {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+    }
+
+    .nav-link {
+        color: #4a5568;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .nav-link:hover {
+        color: #2d3748;
+        background-color: #f7fafc;
+        transform: translateY(-1px);
+    }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .resume-btn {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        border: none;
+    }
+
+    .resume-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        color: white;
+    }
+
+    .mobile-menu-btn {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 25px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .mobile-menu-btn span {
+        width: 100%;
+        height: 2px;
+        background-color: #2d3748;
+        transition: all 0.3s ease;
+        border-radius: 2px;
+    }
+
+    .mobile-nav {
+        display: none;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #e2e8f0;
+    }
+
+    .mobile-nav.active {
+        display: block;
+    }
+
+    .mobile-nav-link {
+        display: block;
+        color: #4a5568;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 15px 0;
+        border-bottom: 1px solid #e2e8f0;
+        transition: color 0.3s ease;
+    }
+
+    .mobile-nav-link:hover {
+        color: #2d3748;
+    }
+
+    .mobile-nav-link:last-of-type {
+        border-bottom: none;
+    }
+
+    .mobile-resume-btn {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white !important;
+        padding: 12px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-block;
+        margin-top: 15px;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-resume-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .desktop-nav {
+            display: none;
         }
 
         .resume-btn {
-            display: none !important;
+            display: none;
         }
 
-        .u-nav-2 li {
-            margin: 10px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 10px;
+        .mobile-menu-btn {
+            display: flex;
         }
 
-        .u-nav-2 a {
-            font-size: 1.1rem !important;
-            padding: 15px 20px !important;
-        }
-
-        /* Show mobile resume button */
-        .u-nav-2 li:last-child {
-            border-bottom: none;
-            margin-top: 20px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .u-sheet-1 {
-            padding: 10px 15px !important;
+        .header-container {
+            padding: 12px 20px;
+            height: 60px;
         }
 
         .header-name {
-            font-size: 1.2rem !important;
+            font-size: 1.5rem;
         }
     }
 
     @media (max-width: 480px) {
-        .u-sheet-1 {
-            padding: 8px 12px !important;
+        .header-container {
+            padding: 10px 15px;
+            height: 55px;
         }
 
         .header-name {
-            font-size: 1.1rem !important;
+            font-size: 1.3rem;
         }
 
-        .menu-collapse {
-            font-size: 0.9rem !important;
+        .mobile-menu-btn {
+            width: 22px;
+            height: 22px;
         }
+    }
+
+    /* Mobile menu animation */
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
   </style>
 </head>
-  <body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="false" class="u-body u-image u-xl-mode" data-lang="en" style="background-position: 50% 50%; background-image: url(&quot;images/default-image.jpg&quot;);"><header class="u-clearfix u-header u-white u-header" id="header"><div class="u-clearfix u-sheet u-sheet-1" style="display: flex; align-items: center; justify-content: space-between; padding: 15px 20px;">
+  <body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="false" class="u-body u-image u-xl-mode" data-lang="en" style="background-position: 50% 50%; background-image: url(&quot;images/default-image.jpg&quot;);">
+
+    <!-- Modern Header -->
+    <header class="modern-header" id="header">
+      <div class="header-container">
         <!-- Left: Name -->
-        <div class="header-name" style="font-size: 1.5rem; font-weight: 700; color: #2d3748; display: flex; align-items: center;">
-          Jordan Pierson
+        <div class="header-name">
+          <a href="./" style="text-decoration: none; color: inherit;">Jordan Pierson</a>
         </div>
 
-        <!-- Right: Navigation and Resume Button -->
-        <div style="display: flex; align-items: center; gap: 20px;">
-        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1" style="position: static;">
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+          <a href="./" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About Me</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#footer" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Right: Resume Button & Mobile Menu -->
+        <div class="header-right">
+          <a href="/Jordan-Resume.pdf" target="_blank" class="resume-btn">Resume</a>
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav" id="mobileNav">
+        <a href="./" class="mobile-nav-link">Home</a>
+        <a href="#about" class="mobile-nav-link">About Me</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#footer" class="mobile-nav-link">Contact</a>
+        <a href="/Jordan-Resume.pdf" target="_blank" class="mobile-resume-btn">Resume</a>
+      </div>
+    </header>
+
+    <!-- Old header structure for compatibility -->
+    <div style="display: none;">
+        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
             <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
               <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
@@ -246,10 +424,9 @@
           </div>
         </nav>
 
-        <!-- Resume Button -->
-        <a href="/Jordan-Resume.pdf" target="_blank" class="resume-btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);">Resume</a>
-        </div>
-      </div></header>
+        </nav>
+      </div>
+    </div>
     <section class="u-clearfix u-section-1" id="block-1">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/job-picture.jpeg" alt="" data-image-width="460" data-image-height="460">
@@ -416,7 +593,39 @@
       </div></footer>
     </div>
     <section class="u-backlink u-clearfix u-grey-80">
-      
+
     </section>
-  
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+
+        if (mobileMenuBtn && mobileNav) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenuBtn.classList.toggle('active');
+                mobileNav.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking on links
+            const mobileLinks = mobileNav.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileNav.classList.remove('active');
+                });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!mobileMenuBtn.contains(e.target) && !mobileNav.contains(e.target)) {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileNav.classList.remove('active');
+                }
+            });
+        }
+    });
+    </script>
+
 </body></html>
