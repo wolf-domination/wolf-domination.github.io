@@ -410,6 +410,56 @@
             max-width: 90% !important;
         }
     }
+
+    /* Mobile Project Cards Improvements */
+    @media (max-width: 768px) {
+        .projects-grid {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+        }
+
+        .project-card .project-image {
+            height: 220px !important;
+        }
+
+        .project-card .project-image div {
+            padding: 15px !important;
+        }
+
+        .project-card .project-image h3 {
+            font-size: 1.3rem !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .project-card .project-image {
+            height: 200px !important;
+        }
+
+        .project-card .project-image div {
+            padding: 12px !important;
+        }
+
+        .project-card .project-image h3 {
+            font-size: 1.2rem !important;
+        }
+
+        .project-card .project-image p {
+            font-size: 0.9rem !important;
+        }
+    }
+
+    /* Enhanced Smooth Scrolling */
+    html {
+        scroll-behavior: smooth !important;
+    }
+
+    /* Navigation Link Active States */
+    .nav-link.active,
+    .mobile-nav-link.active {
+        color: #2d3748 !important;
+        background-color: #f7fafc !important;
+    }
   </style>
 </head>
   <body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="false" class="u-body u-image u-xl-mode" data-lang="en" style="background-position: 50% 50%; background-image: url(&quot;images/default-image.jpg&quot;);">
@@ -425,9 +475,9 @@
         <!-- Desktop Navigation -->
         <nav class="desktop-nav">
           <a href="./" class="nav-link">Home</a>
-          <a href="#about" class="nav-link">About Me</a>
-          <a href="#projects" class="nav-link">Projects</a>
-          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#about" class="nav-link">More About Me</a>
+          <a href="#projects" class="nav-link">My Projects</a>
+          <a href="#block-3" class="nav-link">Skills</a>
           <a href="#footer" class="nav-link">Contact</a>
         </nav>
 
@@ -445,9 +495,9 @@
       <!-- Mobile Navigation -->
       <div class="mobile-nav" id="mobileNav">
         <a href="./" class="mobile-nav-link">Home</a>
-        <a href="#about" class="mobile-nav-link">About Me</a>
-        <a href="#projects" class="mobile-nav-link">Projects</a>
-        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#about" class="mobile-nav-link">More About Me</a>
+        <a href="#projects" class="mobile-nav-link">My Projects</a>
+        <a href="#block-3" class="mobile-nav-link">Skills</a>
         <a href="#footer" class="mobile-nav-link">Contact</a>
         <a href="/Jordan-Resume.pdf" target="_blank" class="mobile-resume-btn">Resume</a>
       </div>
@@ -518,10 +568,10 @@
         <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 50px;">
           <!-- Project 1 -->
           <div class="project-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-            <div class="project-image" style="height: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: relative; overflow: hidden;">
-              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white;">
-                <h3 style="margin: 0; font-size: 1.5rem; font-weight: 600;">NestAway</h3>
-                <p style="margin: 8px 0 0; opacity: 0.9;">Home Sharing Platform</p>
+            <div class="project-image" style="height: 250px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+              <div style="text-align: center; color: white; padding: 20px;">
+                <h3 style="margin: 0; font-size: 1.4rem; font-weight: 600; line-height: 1.2;">NestAway</h3>
+                <p style="margin: 8px 0 0; opacity: 0.9; font-size: 1rem;">Home Sharing Platform</p>
               </div>
             </div>
             <div style="padding: 25px;">
@@ -538,10 +588,10 @@
 
           <!-- Project 2 -->
           <div class="project-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-            <div class="project-image" style="height: 200px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); position: relative; overflow: hidden;">
-              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white;">
-                <h3 style="margin: 0; font-size: 1.5rem; font-weight: 600;">Local Reviews</h3>
-                <p style="margin: 8px 0 0; opacity: 0.9;">Review Platform</p>
+            <div class="project-image" style="height: 250px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+              <div style="text-align: center; color: white; padding: 20px;">
+                <h3 style="margin: 0; font-size: 1.4rem; font-weight: 600; line-height: 1.2;">Local Reviews</h3>
+                <p style="margin: 8px 0 0; opacity: 0.9; font-size: 1rem;">Review Platform</p>
               </div>
             </div>
             <div style="padding: 25px;">
